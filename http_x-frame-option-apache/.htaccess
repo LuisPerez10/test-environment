@@ -1,0 +1,33 @@
+<!-- <IfModule mod_headers.c> -->
+    <!-- Header set X-Frame-Options "DENY" -->
+    <!-- Header append X-Frame-Options: "DENY" -->
+
+<!-- </IfModule> -->
+<!-- # Activar la reescritura de URL
+RewriteEngine On
+
+# Redireccionar HTTP a HTTPS (descomenta las siguientes dos líneas si usas SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Establecer el encabezado X-Frame-Options en DENY
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "DENY"
+</IfModule>
+
+# Personalizar páginas de error
+ErrorDocument 404 /error_pages/404.html
+ErrorDocument 500 /error_pages/500.html
+
+# Prevenir listado de directorios
+Options -Indexes
+
+# Proteger archivos y directorios sensibles
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<Files .htaccess>
+    Deny from all
+</Files> -->
