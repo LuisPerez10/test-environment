@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule .* - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
